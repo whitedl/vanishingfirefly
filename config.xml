@@ -1,0 +1,12 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="myAppender" class="LoggerAppenderFile">
+        <param name="file" value="firefly.log" />
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{Y-n-j G:i:s T} : %message%newline" />
+        </layout>
+    </appender>
+    <root>
+        <level value="INFO" />
+        <appender_ref ref="myAppender" />
+    </root>
+</configuration>
